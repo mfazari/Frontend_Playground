@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/* Body  and title*/
+body {
+	font-family: Helvetica, Arial, 'sans-serif';
+	background-color: #FFFFFF;
+	font-style: normal;
+	font-weight: 200;
+    max-width: 100%;
+}
+
+
+
+
+.alignment {
+    text-align: center;
+}
+
+
+main h3 {
+    font-size: 100%;
+    font-weight: lighter;
+}
+
+
+
+/* Aligning images */
+.box {
+    padding-top: 10%;
+    display: flex;
+    max-width: 100%;
+    padding-top: 10%;
+}
+
+
+
+.footer_column {
+	float: left;
+    padding-right: 3%;
+
+
+}
+
+.footer_column h3 {
+	color: black;
+	text-align: center;
+}
+
+
+
+/* End of page */
+.copyright {
+
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Makes sure, that Copyright text remains in the middle of the page */
+    background-color: white;
+    border-bottom: 100px;
+    border-top: 100px;
+
+}
+
+.copyright p {
+    color: #959595;
+    font-weight: lighter;
+
+}
+
+
+
+@supports (-webkit-overflow-scrolling: touch) {
+    /* CSS specific to iOS devices */
+
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+}
+
+
+/*
+
+
+/* Mobile
+@media (max-width: 320px) {
+
+}
+
+
+/* Small Tablets
+@media (min-width: 320px)and (max-width: 768px) {
+    .box {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+}
+
