@@ -1,0 +1,11 @@
+h1 {
+    text-align: center;
+
+}
+
+
+.field {
+    display: flex; /* Needed to center content */
+    justify-content: center;
+    margin-top: 20%;
+}
