@@ -1,12 +1,11 @@
-
-
-
-    function myFunction() {
-        document.getElementById("number").value = "hello";
-
-    }
+function myFunction() {
 
 
 
 
-    /*  $(document).ready(function () {}); */
+    document.querySelector("#numero2").value = "42";
+
+}
+
+
+/*  $(document).ready(function () {}); */
