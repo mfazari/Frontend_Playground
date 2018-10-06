@@ -6,12 +6,23 @@ h1 {
 
 .field {
     display: flex; /* Needed to center content */
-    flex-direction: column;
+    justify-content: center;
+    flex-direction: row;
+    padding-bottom: 10%;
+    padding-left: auto;
 
 }
 
 .done {
     display: flex; /* Needed to center content */
     flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 10%;
 
+}
+
+.btn btn-dark {
+
+    padding-top: 10%;
 }
