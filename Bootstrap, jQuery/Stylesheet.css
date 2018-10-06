@@ -1,11 +1,17 @@
 h1 {
     text-align: center;
+    padding-bottom: 20%;
 
 }
 
-
 .field {
     display: flex; /* Needed to center content */
-    justify-content: center;
-    margin-top: 20%;
+    flex-direction: column;
+
+}
+
+.done {
+    display: flex; /* Needed to center content */
+    flex-direction: column;
+
 }
