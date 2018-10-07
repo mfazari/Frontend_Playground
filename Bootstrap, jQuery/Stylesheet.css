@@ -13,6 +13,18 @@ h1 {
 
 }
 
+.result {
+    display: flex; /* Needed to center content */
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 10%;
+    padding-left: auto;
+    text-align: center; /* Needed to center text (Blocksatz) */
+    font-size: 30px;
+
+}
+
+
 .done {
     display: flex; /* Needed to center content */
     flex-direction: column;
@@ -22,7 +34,4 @@ h1 {
 
 }
 
-.result{
-    font-size: 30px;
 
-}
