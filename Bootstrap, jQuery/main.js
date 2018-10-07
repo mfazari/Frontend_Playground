@@ -1,8 +1,9 @@
 //Variables
 var x = document.querySelector("#numero1").value;
 var y = document.querySelector("#numero2").value;
-var operator;
+var currentoperator;
 var output;
+
 
 
 
@@ -11,11 +12,14 @@ function submitFunction() {
 
     //document.querySelector("#numero2").value = "42";
 
-    if(isNaN(x || y) || x.length < 1 || y.length < 1 ) {
+    if(isNaN(x) || isNaN(y)  ) {
         document.querySelector("#output").innerHTML = "Invalid input";
 
     }
+    else if(currentoperator == null){
+        document.querySelector("#output").innerHTML = "Click on operator before submitting";
 
+    }
     else {
         document.querySelector("#output").innerHTML = output;
 
@@ -24,6 +28,7 @@ function submitFunction() {
 }
 
 function Calc(operator){
+    currentoperator = operator;
     if(operator == "+"){
         output = document.querySelector("#numero1").value + document.querySelector("#numero2").value;
     }
