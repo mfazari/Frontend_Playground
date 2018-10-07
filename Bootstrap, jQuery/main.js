@@ -24,11 +24,23 @@ function submitFunction() {
 }
 
 function Calc(operator){
-    if(String == "+"){
-        x = document.querySelector("#numero2").value + document.querySelector("#numero2").value;
+    if(operator == "+"){
+        output = document.querySelector("#numero1").value + document.querySelector("#numero2").value;
+    }
+    else if(operator == "-"){
+        output = document.querySelector("#numero1").value - document.querySelector("#numero2").value;
+    }
+    else if(operator == "/"){
+        output = document.querySelector("#numero1").value * document.querySelector("#numero2").value;
 
     }
-    document.querySelector(String).value = "42";
+    else if(operator == "/"){
+        output = document.querySelector("#numero1").value / document.querySelector("#numero2").value;
+    }
 
+    else{
+        //donothing
+
+    }
 
 }
