@@ -25,7 +25,7 @@ h1 {
 }
 
 
-.done {
+.keys {
     display: flex; /* Needed to center content */
     flex-direction: column;
     margin-left: 10%;

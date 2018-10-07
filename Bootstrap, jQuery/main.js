@@ -10,9 +10,7 @@ var output;
 //Checks numbers and prints out result
 function submitFunction() {
 
-    //document.querySelector("#numero2").value = "42";
-
-    if(isNaN(x) || isNaN(y)  ) {
+    if(isNaN(x) || isNaN(y)) {
         document.querySelector("#output").innerHTML = "Invalid input";
 
     }
@@ -24,22 +22,23 @@ function submitFunction() {
         document.querySelector("#output").innerHTML = output;
 
     }
+    console.log(output);
 
 }
 
 function Calc(operator){
     currentoperator = operator;
-    if(operator == "+"){
+    if(operator === "+"){
         output = document.querySelector("#numero1").value + document.querySelector("#numero2").value;
     }
-    else if(operator == "-"){
+    else if(operator === "-"){
         output = document.querySelector("#numero1").value - document.querySelector("#numero2").value;
     }
-    else if(operator == "/"){
+    else if(operator === "/"){
         output = document.querySelector("#numero1").value * document.querySelector("#numero2").value;
 
     }
-    else if(operator == "/"){
+    else if(operator === "/"){
         output = document.querySelector("#numero1").value / document.querySelector("#numero2").value;
     }
 
@@ -47,5 +46,6 @@ function Calc(operator){
         //donothing
 
     }
+    console.log(currentoperator);
 
 }
