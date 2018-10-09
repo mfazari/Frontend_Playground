@@ -1,24 +1,28 @@
 //Variables
-var x = $("#numero1").val();
-var y = $("#numero2").val();
-var output = $("#output").val();
-var currentoperator;
+let currentOperator;
+let output;
 
 
 //Checks numbers and prints out result
 $(document).ready(function () {
     $(document).on('submit', '#my-form', function () {
 
+
+        let x = $("#numero1").val();
+        let y = $("#numero2").val();
+        output = $("#output").val();
+
+
         if (isNaN(x) || isNaN(y)) {
             document.querySelector("#output").innerHTML = "Invalid input";
 
         }
-        else if (currentoperator == null) {
+        else if (currentOperator == null) {
             document.querySelector("#output").innerHTML = "Click on operator before submitting";
 
         }
         else {
-            Calc(currentoperator);
+            Calc(currentOperator);
 
         }
         //Console
@@ -31,14 +35,13 @@ $(document).ready(function () {
 
 function setOperator(operator) {
 
-    currentoperator = operator;
-
+    currentOperator = operator;
+    console.log("Operator Set on " + operator)
 
 };
 
 
 function Calc(operator) {
-    currentoperator = operator;
     if (operator === "+") {
         output = x + y;
     }
@@ -52,13 +55,7 @@ function Calc(operator) {
     else if (operator === "*") {
         output = x * y;
 
-    else
-        {
-            //donothing
-
-        }
-        //Console
-        console.log(currentoperator);
-
     }
+    //Console
+    console.log(currentOperator);
 }
