@@ -1,6 +1,8 @@
 //Variables
 let currentOperator;
 let output;
+let x;
+let y;
 
 
 //Checks numbers and prints out result
@@ -8,8 +10,8 @@ $(document).ready(function () {
     $(document).on('submit', '#my-form', function () {
 
 
-        let x = $("#numero1").val();
-        let y = $("#numero2").val();
+        x = $("#numero1").val();
+        y = $("#numero2").val();
         output = $("#output").val();
 
 
@@ -23,6 +25,7 @@ $(document).ready(function () {
         }
         else {
             Calc(currentOperator);
+            document.querySelector("#output").innerHTML = output;
 
         }
         //Console
@@ -56,6 +59,4 @@ function Calc(operator) {
         output = x * y;
 
     }
-    //Console
-    console.log(currentOperator);
 }
