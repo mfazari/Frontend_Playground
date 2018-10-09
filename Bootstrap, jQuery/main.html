@@ -10,7 +10,9 @@
 
     <title>Playground</title>
 
-    <!-- Script -->
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+
     <script src="main.js"></script>
 
 </head>
@@ -19,15 +21,15 @@
 
 
 <!-- Field -->
-<div class="field">
+<form class="field" id="my-form">
     <div>
     <input class="form-control" type="text" placeholder="number1" value= "" id="numero1">
     </div>
     <div>
     <input class="form-control" type="text" placeholder="number2" value= "" id="numero2">
     </div>
-    <button class="btn btn-danger" onclick="submitFunction()"> Submit </button>
-</div>
+    <input type="submit" class="btn-danger">
+</form>
 
 
 <!-- Result -->
