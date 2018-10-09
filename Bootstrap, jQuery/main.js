@@ -1,8 +1,8 @@
 //Variables
-var x = document.querySelector("#numero1").value;
-var y = document.querySelector("#numero2").value;
+var x = $("#numero1").val();
+var y = $("#numero2").val();
+var output = $("#output").val();
 var currentoperator;
-var output;
 
 
 //Checks numbers and prints out result
@@ -18,37 +18,47 @@ $(document).ready(function () {
 
         }
         else {
-            document.querySelector("#output").innerHTML = output;
+            Calc(currentoperator);
 
         }
         //Console
         console.log(output);
 
+        //stops page from reloading
+        return false;
     });
 });
+
+function setOperator(operator) {
+
+    currentoperator = operator;
+
+
+};
 
 
 function Calc(operator) {
     currentoperator = operator;
     if (operator === "+") {
-        output = document.querySelector("#numero1").value + document.querySelector("#numero2").value;
+        output = x + y;
     }
     else if (operator === "-") {
-        output = document.querySelector("#numero1").value - document.querySelector("#numero2").value;
+        output = x - y;
     }
     else if (operator === "/") {
-        output = document.querySelector("#numero1").value * document.querySelector("#numero2").value;
+        output = x / y;
 
     }
-    else if (operator === "/") {
-        output = document.querySelector("#numero1").value / document.querySelector("#numero2").value;
+    else if (operator === "*") {
+        output = x * y;
+
+    else
+        {
+            //donothing
+
+        }
+        //Console
+        console.log(currentoperator);
+
     }
-
-    else {
-        //donothing
-
-    }
-    //Console
-    console.log(currentoperator);
-
 }

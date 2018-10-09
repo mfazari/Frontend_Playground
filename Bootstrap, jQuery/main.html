@@ -11,11 +11,11 @@
     <title>Playground</title>
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="main.js"></script>
-
 </head>
+
+<!-- Body -->
 <body class="bg-primary">
 <h1>Playground</h1>
 
@@ -23,28 +23,28 @@
 <!-- Field -->
 <form class="field" id="my-form">
     <div>
-    <input class="form-control" type="text" placeholder="number1" value= "" id="numero1">
+    <input class="form-control" type="text" placeholder="number1" id="numero1">
     </div>
     <div>
     <input class="form-control" type="text" placeholder="number2" value= "" id="numero2">
     </div>
-    <input type="submit" class="btn-danger">
+    <input type="submit" onsubmit="Calc" class="btn-danger">
 </form>
 
 
 <!-- Result -->
 <div class = "result">
     <p> It's <br></p>
-    <p id="output"> </p>
+    <p id="output" value=""> </p>
 </div>
 
 
 <!-- Keys/Input-->
 <div class="keys">
-    <button class="btn btn-dark" value="+" onclick="Calc('+')"> + </button>
-    <button class="btn btn-dark"  value="-" onclick="Calc('-')"> - </button>
-    <button class="btn btn-dark"  value="*" onclick="Calc('*')"> * </button>
-    <button class="btn btn-dark"  value="/" onclick="Calc('/')"> / </button>
+    <button class="btn btn-dark" value="+" onclick="setOperator('+')"> + </button>
+    <button class="btn btn-dark"  value="-" onclick="setOperator('-')"> - </button>
+    <button class="btn btn-dark"  value="*" onclick="setOperator('*')"> * </button>
+    <button class="btn btn-dark"  value="/" onclick="setOperator('/')"> / </button>
 </div>
 
 
