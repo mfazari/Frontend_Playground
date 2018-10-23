@@ -46,7 +46,8 @@ function setOperator(operator) {
 
 function Calc(operator) {
     if (operator === "+") {
-        output = x + y;
+        //parseInt because else it converts to String
+        output = parseInt(x, 10) + parseInt(y, 10);
     }
     else if (operator === "-") {
         output = x - y;
