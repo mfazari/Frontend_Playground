@@ -1,12 +1,12 @@
-//Variables
-let currentOperator;
-let output;
-let x;
-let y;
+//jQuery
+//$(document).ready(function () {
+$(function(){
+    //Variables
+    var currentOperator;
+    var output;
+    var x;
+    var y;
 
-
-//Checks numbers and prints out result
-$(document).ready(function () {
     $(document).on('submit', '#my-form', function () {
 
 
@@ -34,16 +34,42 @@ $(document).ready(function () {
         //stops page from reloading
         return false;
     });
-});
-
-function setOperator(operator) {
-
-    currentOperator = operator;
-    console.log("Operator Set on " + operator)
-
-};
 
 
+    // Set operator
+
+    //+
+    $("#plus").click(function(){
+
+    currentOperator = "+";
+    console.log("Operator Set on " + currentOperator)
+    });
+
+    //-
+    $("#minus").click(function(){
+
+    currentOperator = "-";
+    console.log("Operator Set on " + currentOperator)
+    });
+
+    //*
+    $("#multiply").click(function(){
+
+    currentOperator = "*";
+    console.log("Operator Set on " + currentOperator)
+    });
+
+    // /
+    $("#divide").click(function(){
+
+    currentOperator = "/";
+    console.log("Operator Set on " + currentOperator)
+
+    });
+
+
+
+// Calculates Result
 function Calc(operator) {
     if (operator === "+") {
         //parseInt because else it converts to String
@@ -61,3 +87,5 @@ function Calc(operator) {
 
     }
 }
+
+});
